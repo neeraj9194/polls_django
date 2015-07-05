@@ -1,0 +1,11 @@
+<h1>{{question.ques_text}}</h1>
+<table style="text-align:left;">
+{% for choice in question.choice_set.all %}
+<tr>
+<th>choice {{forloop.counter}}: </th>
+<th>{{choice.choice_text}}</th>
+<th>has vote count</th>
+<th>{{choice.votes}}</th>
+</tr>
+{% endfor %}
+</table>
